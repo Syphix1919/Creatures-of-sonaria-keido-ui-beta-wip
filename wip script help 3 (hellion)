@@ -1,0 +1,71 @@
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Carnivore Carcass")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodPickup"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Carcass")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodChunk"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Herbivore Carcass")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodPickup"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Carcass")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodChunk"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Chunk")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodPickup"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
+wait()
+local args = {
+    [1] = workspace:WaitForChild("Interactions"):WaitForChild("Food"):WaitForChild("Omnivore Carcass")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("FoodPickup"):FireServer(unpack(args))
+wait()
+local args = {
+    [1] = "Hellion"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
