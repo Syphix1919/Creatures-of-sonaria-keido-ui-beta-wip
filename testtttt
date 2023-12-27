@@ -6,7 +6,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -14,7 +13,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -22,7 +20,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -30,7 +27,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -38,7 +34,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -46,7 +41,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -54,7 +48,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -62,7 +55,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -70,7 +62,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -78,7 +69,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -86,7 +76,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -94,7 +83,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -102,7 +90,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -110,7 +97,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -118,7 +104,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -126,7 +111,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -134,7 +118,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -142,7 +125,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
@@ -150,7 +132,6 @@ local args = {
                                             }
                                             game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CharactersDamageRemote"):FireServer(unpack(args))
 wait(0.9)
-local Character = game.Players.LocalPlayer.Character
 local args = {
                                                 [1] = {
                                                     [1] = Character
