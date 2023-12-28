@@ -69,6 +69,11 @@ local Tab1 = GUI:Tab{
 	Name = "Artifact slot 1 (semi-automatism)",				     
 	Icon = "rbxassetid://15784853781"     
 }
+
+local Tab2 = GUI:Tab{
+	Name = "Load basic script",				     
+	Icon = "rbxassetid://15784853781"     
+}
 ----
 
 
@@ -78,3 +83,34 @@ local Tab1 = GUI:Tab{
 
 --- 
 
+Tab2:Button{
+	Name = "Get back to the basic script",
+	Description = "Click this",
+	Callback = function() 
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphix19/Creatures-of-sonaria-syphix-keido-ui-main/main/Script.lua"))()
+	end
+}
+
+
+
+
+
+Tab1:Button{
+	Name = "Spawn the kora",
+	Description = "You still stay in menu !",
+	Callback = function() 
+		local args = {
+            [1] = "Slot10"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("SpawnRemote"):InvokeServer(unpack(args))
+	end
+}
+
+Tab1:Button{
+	Name = "Kill the kora",
+	Description = "",
+	Callback = function() 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphix19/Creatures-of-sonaria-syphix-keido-ui-main/main/protected%20main%20help%202%20(kill)"))()
+	end
+}
