@@ -1,0 +1,79 @@
+--DISCORD SERVER : https://discord.gg/JG8dHW9XHK
+
+getgenv().whatToSay = false
+getgenv().alwaysDrink = false
+getgenv().alwaysSniff = false
+getgenv().LoopCollectingSnowmans = false
+getgenv().autoCollectPresents = false
+getgenv().autoGivePresents = false
+getgenv().autoCompleteBakery  = false
+
+
+--UI lib
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphix19/ui-library/main/uiLib"))()
+
+
+local GUI = Mercury:Create{
+    Name = "Keido ui",
+    Size = UDim2.fromOffset(480, 360),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/Syphix19/ui-library/blob/main/uiLib"
+}
+
+GUI:Prompt{
+	Followup = false,
+	Title = "Welcome",
+	Text = "Select an automatism you want to activate here",
+	Buttons = {
+		Water = function()
+			autoDrink()
+		end,
+		Sniff = function()
+			autoSniff()
+		end,
+		NoThanks = function()
+		
+		end
+	}
+}
+
+GUI:Notification{
+	Text = "Syphix's unique hub is loading..",
+	Duration = 1.9,
+	Callback = function() end
+}
+wait(2)
+GUI:Notification{
+	Text = "Script succefully loaded",
+	Duration = 3,
+	Callback = function() end
+}
+
+
+GUI:Credit{
+	Name = "Script creator discord server",
+	Description = "Syphix keido ui",
+	Discord = "https://discord.gg/JG8dHW9XHK"
+}
+
+GUI:Credit{
+	Name = "Person that inspired me to learn to exploit",
+	Description = "Mangnex",
+	Discord = "https://discord.gg/Tj2RqJ6E"
+}
+----
+
+--Tabs
+
+local Tab1 = GUI:Tab{
+	Name = "Artifact slot 3 (semi-automatism)",				     
+	Icon = "rbxassetid://15784853781"     
+}
+----
+
+
+--Functions
+
+
+
+--- 
