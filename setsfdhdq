@@ -865,4 +865,15 @@ local creatureSlot
 	return end
  }
 
-
+ Tab8:Button{
+	Name = "Slot notif",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Here :",
+			Text = creatureSlot,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
