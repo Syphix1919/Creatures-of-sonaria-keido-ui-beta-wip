@@ -69,10 +69,3 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("WardenOffering"):InvokeServer(unpack(args))
-wait(0.5)
-GUI:Notification{
-	Title = "Novus progression before executing :",
-	Text = novusLocalText,
-	Duration = 3,
-	Callback = function() end
-}
