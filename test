@@ -598,6 +598,23 @@ Tab6:Textbox({
 	end
 }
 
+Tab7:Prompt{
+	Followup = false,
+	Title = "Reminder",
+	Text = "It's recommended to play as baby korathos",
+	Buttons = {
+		Ok = function()
+
+		end,
+		No = function()
+
+		end,
+		NoThanks = function()
+		
+		end
+	}
+}
+
 Tab7:Button{
 	Name = "Hide scents",
 	Description = "",
@@ -846,16 +863,16 @@ Tab7:Button{
 
 local creatureSelected
 Tab7:Dropdown{
-	Name = "Dropdown",
+	Name = "Eigion",
 	StartingText = "Select...",
 	Description = nil,
 	Items = {
-		{"Eigion", 1},
+		{"Sacrifice food", 1},
 		{"Novus", 2}
 	},
 	Callback = function(itemCreature) 
 		creatureSelected = itemCreature
-		if creatureSelected == 1 then
+		if creatureSelected == deliver then
 			GUI:Notification{
 				Title = "Worked",
 				Text = "yes eigion",
