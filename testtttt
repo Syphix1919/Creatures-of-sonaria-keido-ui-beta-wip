@@ -74,39 +74,35 @@ local Tab2 = GUI:Tab{
 	Icon = "rbxassetid://15085628089"     
 }
 
-local Tab3 = GUI:Tab{
-	Name = "Fast Settings",				     
-	Icon = "rbxassetid://15085821189"     
-}	
 
-local Tab4 = GUI:Tab{
+local Tab3 = GUI:Tab{
 	Name = "Legacy version",				     
 	Icon = "rbxassetid://15086125508"     
 }	
 
-local Tab5 = GUI:Tab{
+local Tab4 = GUI:Tab{
 	Name = "In-game",				     
 	Icon = "rbxassetid://10042847331"     
 }
 
-local Tab6 = GUI:Tab{
+local Tab5 = GUI:Tab{
 	Name = "Other scripts (credits to mangnex)",				     
 	Icon = "rbxassetid://15088750841"     
 }
 
-local Tab7 = GUI:Tab{
+local Tab6 = GUI:Tab{
 	Name = "Misc",				     
 	Icon = "rbxassetid://15694410767"     
 }
 
-local Tab8 = GUI:Tab{
+local Tab7 = GUI:Tab{
 	Name = "Artifacts beta (wip)",				     
 	Icon = "rbxassetid://15755618125"     
 }
 
-local Tab9 = GUI:Tab{
-	Name = "Artifacts beta (meat spawn)",				     
-	Icon = "rbxassetid://15775148046"     
+local Tab8 = GUI:Tab{
+	Name = "Artifacts beta (semi-automatism)",				     
+	Icon = "rbxassetid://15755618125"     
 }
 ----
 
@@ -460,195 +456,14 @@ Tab2:Button({
 })
 
 
-
 Tab3:Button({
-   Name = "Enable Performance mode",
-   Callback = function()
-   local args = {
-    [1] = "States",
-    [2] = {
-        [1] = "CharacterReparent",
-        [2] = true
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable Performance mode",
-   Callback = function()
-   local args = {
-    [1] = "States",
-    [2] = {
-        [1] = "CharacterReparent",
-        [2] = false
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Enable camera smoothing",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "CameraSmoothing",
-				[2] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable camera smoothing",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "CameraSmoothing",
-				[2] = false
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Enable camera shake",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "CameraShake",
-				[2] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable camera shake",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "CameraShake",
-				[2] = false
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Enable footprints visuals",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "Footprints",
-				[2] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable footprints visuals",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "Footprints",
-				[2] = false
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Enable blood effects",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "BloodEffects",
-				[2] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable blood effects",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "BloodEffects",
-				[2] = false
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Enable HQ lighting",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "HQLighting",
-				[2] = true
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab3:Button({
-   Name = "Disable HQ lighting",
-   Callback = function()
-		local args = {
-			[1] = "States",
-			[2] = {
-				[1] = "HQLighting",
-				[2] = false
-			}
-		}
-
-		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
-   end,
-})
-
-Tab4:Button({
    Name = "Join legacy version(old cos)",
    Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.TeleportToLegacyRemote:InvokeServer()
    end,
 })
 
-Tab4:Textbox({
+Tab3:Textbox({
    Name = "PREMIUM : please enter your key (credits to mangnex)",
    PlaceholderText = "",
    RemoveTextAfterFocusLost = false,
@@ -659,7 +474,7 @@ Tab4:Textbox({
 })
 
 
-Tab5:Toggle{
+Tab4:Toggle{
 	Name = "Auto drink",
 	StartingState = false,
 	Description = nil,
@@ -671,7 +486,7 @@ Tab5:Toggle{
 	end
 }
 
-Tab5:Toggle{
+Tab4:Toggle{
 	Name = "Auto do sniff missions (there is a cooldown)",
 	StartingState = false,
 	Description = nil,
@@ -683,7 +498,7 @@ Tab5:Toggle{
 	end
 }
 
-Tab5:Button({
+Tab4:Button({
     Name = "Place territory (anywhere, no cooldown)(keybind below)",
     Callback = function()
         local args = {
@@ -693,14 +508,14 @@ Tab5:Button({
     end,
  })
 
-Tab5:keybind({Callback = function()
+Tab4:keybind({Callback = function()
     local args = {
         [1] = nil --[[Vector3]]
     }
     game:GetService("ReplicatedStorage").Remotes.Territory:FireServer(unpack(args))
 end,})
 
-Tab5:Button({
+Tab4:Button({
     Name = "Get current spawned token (keybind below)",
     Callback = function()
         local args = {
@@ -718,14 +533,14 @@ Tab5:Button({
 end,})
 
 
-Tab6:Button({
+Tab5:Button({
 	Name = "Recode",
    Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Mangnex/Lycan-X-Hub/main/Creature%20Of%20Sonaria%20Recode"))()
    end,
 })
 
-Tab6:Textbox({
+Tab5:Textbox({
    Name = "Legacy version PREMIUM : please enter your key",
    PlaceholderText = "",
    RemoveTextAfterFocusLost = false,
@@ -735,7 +550,7 @@ Tab6:Textbox({
    end,
 })
 
-Tab7:Button({
+Tab6:Button({
 	Name = "Insta mud (must stand in mud before clicking)(keybind below)",
    Callback = function()
 	local args = {
@@ -746,7 +561,7 @@ Tab7:Button({
    end,
 })
 
-Tab7:keybind({Callback = function()
+Tab6:keybind({Callback = function()
 	local args = {
 		[1] = workspace.Interactions.Mud
 	}
@@ -754,7 +569,7 @@ Tab7:keybind({Callback = function()
 	game:GetService("ReplicatedStorage").Remotes.Mud:FireServer(unpack(args))
 end,})
 
-Tab7:Textbox({
+Tab6:Textbox({
 	Name = "Create slots/spam slots (input full creature name)",
 	PlaceholderText = "",
 	RemoveTextAfterFocusLost = false,
@@ -780,7 +595,7 @@ Tab7:Textbox({
 	end,
  })
 
- Tab7:Button{
+ Tab6:Button{
 	Name = "Get 13 storage slot",
 	Description = "Resets when you leave EXEPT for the creatures you stored",
 	Callback = function() 
@@ -788,7 +603,7 @@ Tab7:Textbox({
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Hide scents",
 	Description = "",
 	Callback = function() 
@@ -796,7 +611,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Teleport to safe place",
 	Description = "",
 	Callback = function() 
@@ -804,7 +619,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to eigion (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the eigion warden statue",
 	Callback = function() 
@@ -819,7 +634,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Eigion progression",
 	Description = "",
 	Callback = function() 
@@ -832,7 +647,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to novus (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the novus warden statue",
 	Callback = function() 
@@ -848,7 +663,7 @@ Tab8:Button{
 }
 
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Novus progression",
 	Description = "",
 	Callback = function() 
@@ -861,7 +676,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to ardor (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the ardor warden statue",
 	Callback = function() 
@@ -876,7 +691,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Ardor progression",
 	Description = "",
 	Callback = function() 
@@ -889,7 +704,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to hellion (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the hellion warden statue",
 	Callback = function() 
@@ -905,7 +720,7 @@ Tab8:Button{
 }
 
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Hellion progression",
 	Description = "",
 	Callback = function() 
@@ -919,7 +734,7 @@ Tab8:Button{
 }
 
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to boreal (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the boreal warden statue",
 	Callback = function() 
@@ -934,7 +749,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Boreal progression",
 	Description = "",
 	Callback = function() 
@@ -947,7 +762,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to verdant (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the verdant warden statue",
 	Callback = function() 
@@ -962,7 +777,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Verdant progression",
 	Description = "",
 	Callback = function() 
@@ -975,7 +790,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to angelic (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the angelic warden statue",
 	Callback = function() 
@@ -990,7 +805,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Angelic progression",
 	Description = "",
 	Callback = function() 
@@ -1005,7 +820,7 @@ Tab8:Button{
 
 
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Deliver food to garra (play as baby korathos)",
 	Description = "Grab food and sacrifice it to the garra warden statue",
 	Callback = function() 
@@ -1020,7 +835,7 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
+Tab7:Button{
 	Name = "Garra progression",
 	Description = "",
 	Callback = function() 
@@ -1033,24 +848,21 @@ Tab8:Button{
 	end
 }
 
-Tab8:Button{
-	Name = "Eigion cooldown (may not work)",
-	Description = "",
-	Callback = function() 
-		GUI:Notification{
-			Title = "Cooldown :",
-			Text = workspace.Interactions["Warden Shrines"].Eigion.EigionTablet.TimerGui.TimerLabel.Text,
-			Duration = 3,
-			Callback = function() end
-		}
-	end
-}
 
-Tab9:Button{
-	Name = "Kill creature",
-	Description = "korathos recommended",
-	Callback = function() 
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Syphix19/Creatures-of-sonaria-syphix-keido-ui-main/main/protected%20main%20help%202%20(kill)"))()
-	end
-}
+local creatureSlot
+ Tab8:Dropdown{
+	Name = "Dropdown",
+	StartingText = "Select...",
+	Description = nil,
+	Items = {
+		{"Slot1", "Slot1"}, 
+		{"Slot2", "Slot2"}, 
+		{"Slot3", "Slot3"}, 
+
+	},
+	Callback = function(itemSlotOfCreature) 
+		creatureSlot = itemSlotOfCreature
+	return end
+ }
+
 
