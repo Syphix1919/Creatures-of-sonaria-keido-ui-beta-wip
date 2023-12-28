@@ -865,7 +865,7 @@ local creatureSlot
 	return end
  }
 
- Tab8:Button{
+Tab8:Button{
 	Name = "Slot notif",
 	Description = "",
 	Callback = function() 
