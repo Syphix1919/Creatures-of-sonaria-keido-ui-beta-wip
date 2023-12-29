@@ -1,0 +1,994 @@
+--DISCORD SERVER : https://discord.gg/JG8dHW9XHK
+
+getgenv().whatToSay = false
+getgenv().alwaysDrink = false
+getgenv().alwaysSniff = false
+getgenv().LoopCollectingSnowmans = false
+getgenv().autoCollectPresents = false
+getgenv().autoGivePresents = false
+getgenv().autoCompleteBakery  = false
+
+
+--UI lib
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+
+
+local GUI = Mercury:Create{
+    Name = "Keido ui",
+    Size = UDim2.fromOffset(480, 360),
+    Theme = Mercury.Themes.Dark,
+    Link = "https://github.com/deeeity/mercury-lib"
+}
+
+GUI:Prompt{
+	Followup = false,
+	Title = "Welcome",
+	Text = "Select an automatism you want to activate here",
+	Buttons = {
+		Water = function()
+			autoDrink()
+		end,
+		Sniff = function()
+			autoSniff()
+		end,
+		NoThanks = function()
+		
+		end
+	}
+}
+
+GUI:Notification{
+	Text = "Syphix's unique hub is loading..",
+	Duration = 1.9,
+	Callback = function() end
+}
+wait(2)
+GUI:Notification{
+	Text = "Script succefully loaded",
+	Duration = 3,
+	Callback = function() end
+}
+
+
+GUI:Credit{
+	Name = "Script creator",
+	Description = "Syphix",
+	Discord = "syphix_n19"
+}
+
+GUI:Credit{
+	Name = "Person that inspired me to learn to exploit",
+	Description = "Mangnex",
+	Discord = "https://discord.gg/Tj2RqJ6E"
+}
+
+local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = game.CoreGui
+
+    local UIToggle = Instance.new("TextButton")
+
+UIToggle.Parent = screenGui
+
+ UIToogle.MouseButton1Click:Connect(function()
+game:GeyService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.F1, false, game)
+   end)
+----
+
+--Tabs
+local Tab = GUI:Tab{
+	Name = "Christmas event",				     
+	Icon = "rbxassetid://15582879663"     
+}
+
+local Tab2 = GUI:Tab{
+	Name = "Trading server",				     
+	Icon = "rbxassetid://15085628089"     
+}
+
+local Tab3 = GUI:Tab{
+	Name = "Fast Settings",				     
+	Icon = "rbxassetid://15085821189"     
+}	
+
+local Tab4 = GUI:Tab{
+	Name = "Legacy version",				     
+	Icon = "rbxassetid://15086125508"     
+}	
+
+local Tab5 = GUI:Tab{
+	Name = "In-game",				     
+	Icon = "rbxassetid://10042847331"     
+}
+
+local Tab6 = GUI:Tab{
+	Name = "Other scripts (credits to mangnex)",				     
+	Icon = "rbxassetid://15088750841"     
+}
+
+local Tab7 = GUI:Tab{
+	Name = "Misc",				     
+	Icon = "rbxassetid://15694410767"     
+}
+
+local Tab8 = GUI:Tab{
+	Name = "Artifacts beta (wip)",				     
+	Icon = "rbxassetid://15755618125"     
+}
+----
+
+
+--Functions
+function getPlayerPos()
+	local plyr = game.Players.LocalPlayer
+	if plyr.Character then
+		return plyr.Character.HumanoidRootPart.Position
+	end
+		return false
+end
+
+function teleportTo(placeCFrame)
+	local plyr = game.Players.LocalPlayer
+	if plyr.Character then
+		plyr.Character.HumanoidRootPart.CFrame = placeCFrame
+	end
+end
+
+function autoDrink()
+	getgenv().alwaysDrink = true
+	while getgenv().alwaysDrink == true do
+		local args = {
+			[1] = workspace.Interactions.Lakes.Lake
+		}
+		game:GetService("ReplicatedStorage").Remotes.DrinkRemote:FireServer(unpack(args))
+		wait(0.5)
+	end
+end
+
+function DestroySnownmans()
+	loadstring(game:HttpGet("https://pastebin.com/raw/xtrY3psB", true))()
+end
+
+function collectPresents()
+	local args = {
+		[1] = "PresentWhite"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentWhite"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentWhite"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentGreen"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentGreen"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentGreen"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentRed"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentRed"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "PresentRed"
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+	wait(0.1)
+end	
+
+function autoCollectPresents()
+	getgenv().autoCollectPresents = true
+	while getgenv().autoCollectPresents == true do
+		local args = {
+			[1] = "PresentWhite"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentWhite"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentWhite"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentGreen"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentGreen"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentGreen"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentRed"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentRed"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = "PresentRed"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedDeliveryObjectRemote:InvokeServer(unpack(args))
+		wait(0.1)
+	end	
+
+function deliverPresents()
+		local args = {
+			[1] = workspace.Event.DeliveryPointWhite
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = workspace.Event.DeliveryPointGreen
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = workspace.Event.DeliveryPointRed
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+end
+end
+
+function deliverPresents()
+	local args = {
+		[1] = workspace.Event.DeliveryPointWhite
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = workspace.Event.DeliveryPointGreen
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = workspace.Event.DeliveryPointRed
+	}
+	
+	game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+end	
+
+function autoDeliverPresents()
+	getgenv().autoGivePresents = true
+	while getgenv().autoGivePresents == true do
+		local args = {
+			[1] = workspace.Event.DeliveryPointWhite
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = workspace.Event.DeliveryPointGreen
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+		wait(0.1)
+		local args = {
+			[1] = workspace.Event.DeliveryPointRed
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.DeliveryDropoffEvent:FireServer(unpack(args))
+		wait(0.1)
+	end
+end
+
+function completeMyloBakery()
+	game:GetService("ReplicatedStorage").Remotes.JerryLoadUp:FireServer()
+	wait()
+	game:GetService("ReplicatedStorage").Remotes.JerryUnbox:InvokeServer()	
+end	
+
+function autoCompleteMyloBakery()
+	getgenv().autoCollectPresents = true
+	while getgenv().autoCollectPresents == true do
+		game:GetService("ReplicatedStorage").Remotes.JerryLoadUp:FireServer()
+		wait()
+		game:GetService("ReplicatedStorage").Remotes.JerryUnbox:InvokeServer()
+	end	
+end
+
+function autoSniff()
+	getgenv().alwaysSniff = true
+    while getgenv().alwaysSniff == true do
+        local args = {
+            [1] = 1
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.SetMissionRemote:FireServer(unpack(args))
+        wait(1)        
+    end
+end
+
+function doAll()
+	collectPresents()
+	deliverPresents()
+	DestroySnownmans()
+	completeMyloBakery()
+end	
+
+--- 
+
+Tab:Button{
+	Name = "Execute all",
+	Description = "Execute every function shown below at the same time",
+	Callback = function() 
+	doAll()
+	end
+}
+
+Tab:Button{
+	Name = "Destroy all snowmans",
+	Description = "Find all snowmans in the map and collect them",
+	Callback = function() 
+	DestroySnownmans()
+	end
+}
+
+
+Tab:Button{
+	Name = "Collect all present",
+	Description = "Collect all presents in the map",
+	Callback = function() 
+		collectPresents()
+	end
+}
+
+
+Tab:Button{
+	Name = "Deliver all present",
+	Description = "Deliver all presents in your inventory",
+	Callback = function() 
+		deliverPresents()
+	end
+}
+
+
+Tab:Button{
+	Name = "Complete Mylo bakery",
+	Description = "Gives dough to Mylo and make cookies",
+	Callback = function() 
+		completeMyloBakery()
+	end
+}
+
+Tab:Button{
+	Name = "Auto complete bakery",
+	Description = "Automaticly gives dough to Mylo and make cookies",
+	Callback = function() 
+	autoCompleteMyloBakery()
+	end
+}
+
+Tab:Toggle{
+	Name = "Auto collect presents",
+	StartingState = false,
+	Description = nil,
+	Callback = function(bool) 
+	getgenv().autoCollectPresents = bool
+	if bool then
+		autoCollectPresents()
+	end
+	end
+}
+
+Tab:Toggle{
+	Name = "Auto deliver presents",
+	StartingState = false,
+	Description = nil,
+	Callback = function(bool) 
+	getgenv().autoGivePresents = bool
+	if bool then
+		autoDeliverPresents()
+	end
+	end
+}
+
+Tab2:Textbox({
+   Name = "What do you want to send ?",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+   getgenv().whatToSay = true
+   while getgenv().whatToSay == true do
+	   local args = {
+    		[1] = (Text), --the message you wanna say (between " and the other ")
+    		[2] = "All"
+    		}
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+			wait(5)
+   end
+   end,
+})
+
+
+Tab2:Button({
+   Name = "Stop talking",
+   Callback = function()
+   getgenv().whatToSay = false
+   end,
+})
+
+
+
+Tab3:Button({
+   Name = "Enable Performance mode",
+   Callback = function()
+   local args = {
+    [1] = "States",
+    [2] = {
+        [1] = "CharacterReparent",
+        [2] = true
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable Performance mode",
+   Callback = function()
+   local args = {
+    [1] = "States",
+    [2] = {
+        [1] = "CharacterReparent",
+        [2] = false
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Enable camera smoothing",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "CameraSmoothing",
+				[2] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable camera smoothing",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "CameraSmoothing",
+				[2] = false
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Enable camera shake",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "CameraShake",
+				[2] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable camera shake",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "CameraShake",
+				[2] = false
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Enable footprints visuals",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "Footprints",
+				[2] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable footprints visuals",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "Footprints",
+				[2] = false
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Enable blood effects",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "BloodEffects",
+				[2] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable blood effects",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "BloodEffects",
+				[2] = false
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Enable HQ lighting",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "HQLighting",
+				[2] = true
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab3:Button({
+   Name = "Disable HQ lighting",
+   Callback = function()
+		local args = {
+			[1] = "States",
+			[2] = {
+				[1] = "HQLighting",
+				[2] = false
+			}
+		}
+
+		game:GetService("ReplicatedStorage").Remotes.ChangeSettingsRemote:FireServer(unpack(args))
+   end,
+})
+
+Tab4:Button({
+   Name = "Join legacy version(old cos)",
+   Callback = function()
+		game:GetService("ReplicatedStorage").Remotes.TeleportToLegacyRemote:InvokeServer()
+   end,
+})
+
+Tab4:Textbox({
+   Name = "PREMIUM : please enter your key (credits to mangnex)",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+	getgenv().Key = (Text)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Mangnex/Lycan-X-Hub/main/3y1e3_<430%2Bi3_O03%23t33%7D%26!3Esf3fpk%5EOOx%7DOO4%7D0Oi%7D_O7%7D%2304%7D%7DO%5E%7DEO!%7DfOk%7Dl04%5E!44%5E04i%5E747%5E%2343!%7D4k%5EE4!%5Ef4k%5El00EO04!70iE707E%2303E%7D0%5EEEilEfiVEliO!Oi4!0iikii7!%23i3!Ei%5E!!i!!f%5EE!l_)fO_0f0_if__7"))() 
+   end,
+})
+
+
+Tab5:Toggle{
+	Name = "Auto drink",
+	StartingState = false,
+	Description = nil,
+	Callback = function(bool) 
+	getgenv().alwaysDrink = bool
+	if bool then
+		autoDrink()
+	end
+	end
+}
+
+Tab5:Toggle{
+	Name = "Auto do sniff missions (there is a cooldown)",
+	StartingState = false,
+	Description = nil,
+	Callback = function(bool) 
+	getgenv().alwaysSniff = bool
+	if bool then
+		autoSniff()
+	end
+	end
+}
+
+Tab5:Button({
+    Name = "Place territory (anywhere, no cooldown)(keybind below)",
+    Callback = function()
+        local args = {
+            [1] = nil --[[Vector3]]
+        }
+        game:GetService("ReplicatedStorage").Remotes.Territory:FireServer(unpack(args))
+    end,
+ })
+
+Tab5:keybind({Callback = function()
+    local args = {
+        [1] = nil --[[Vector3]]
+    }
+    game:GetService("ReplicatedStorage").Remotes.Territory:FireServer(unpack(args))
+end,})
+
+Tab5:Button({
+    Name = "Get current spawned token (keybind below)",
+    Callback = function()
+        local args = {
+            [1] = nil --[[Vector3]]
+        }
+		game:GetService("ReplicatedStorage").Remotes.GetSpawnedTokenRemote:InvokeServer()
+    end,
+ })
+
+ Tab5:keybind({Callback = function()
+    local args = {
+        [1] = nil --[[Vector3]]
+    }
+    game:GetService("ReplicatedStorage").Remotes.GetSpawnedTokenRemote:InvokeServer()
+end,})
+
+
+Tab6:Button({
+	Name = "Recode",
+   Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Mangnex/Lycan-X-Hub/main/Creature%20Of%20Sonaria%20Recode"))()
+   end,
+})
+
+Tab6:Textbox({
+   Name = "Legacy version PREMIUM : please enter your key",
+   PlaceholderText = "",
+   RemoveTextAfterFocusLost = false,
+   Callback = function(Text)
+	getgenv().Key = (Text)
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Mangnex/Lycan-X-Hub/main/3y1e3_<430%2Bi3_O03%23t33%7D%26!3Esf3fpk%5EOOx%7DOO4%7D0Oi%7D_O7%7D%2304%7D%7DO%5E%7DEO!%7DfOk%7Dl04%5E!44%5E04i%5E747%5E%2343!%7D4k%5EE4!%5Ef4k%5El00EO04!70iE707E%2303E%7D0%5EEEilEfiVEliO!Oi4!0iikii7!%23i3!Ei%5E!!i!!f%5EE!l_)fO_0f0_if__7"))() 
+   end,
+})
+
+Tab7:Button({
+	Name = "Insta mud (must stand in mud before clicking)(keybind below)",
+   Callback = function()
+	local args = {
+		[1] = workspace.Interactions.Mud
+	}
+	 
+	game:GetService("ReplicatedStorage").Remotes.Mud:FireServer(unpack(args))
+   end,
+})
+
+Tab7:keybind({Callback = function()
+	local args = {
+		[1] = workspace.Interactions.Mud
+	}
+	 
+	game:GetService("ReplicatedStorage").Remotes.Mud:FireServer(unpack(args))
+end,})
+
+Tab7:Textbox({
+	Name = "Create slots/spam slots (input full creature name)",
+	PlaceholderText = "",
+	RemoveTextAfterFocusLost = false,
+	Callback = function(Text1)
+		local args = {
+			[1] = (Text1)
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CreateSlotRemote:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = (Text1)
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CreateSlotRemote:InvokeServer(unpack(args))
+		wait()
+		local args = {
+			[1] = (Text1)
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CreateSlotRemote:InvokeServer(unpack(args))
+		wait()
+	end,
+ })
+
+ Tab7:Button{
+	Name = "Get 13 storage slot",
+	Description = "Resets when you leave EXEPT for the creatures you stored",
+	Callback = function() 
+		game.Players.LocalPlayer.PlayerGui.Data.StorageCap.Value = 13
+	end
+}
+
+Tab8:Button{
+	Name = "Teleport to safe place",
+	Description = "",
+	Callback = function() 
+		teleportTo(workspace.Terrain["Warden Shrines"].Verdant:GetChildren()[9].CFrame)
+	end
+}
+
+Tab8:Button{
+	Name = "Deliver food to eigion (play as baby korathos)",
+	Description = "Grab food and sacrifice it to the eigion warden statue",
+	Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/5UEsPnJS", true))()
+		wait(0.5)
+		GUI:Notification{
+			Title = "Eigion progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Eigion.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Eigion cooldown (may not work)",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Cooldown :",
+			Text = workspace.Interactions["Warden Shrines"].Eigion.EigionTablet.TimerGui.TimerLabel.Text,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Deliver food to novus (play as baby korathos)",
+	Description = "Grab food and sacrifice it to the novus warden statue",
+	Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/vwXh46xi", true))()
+		wait(0.5)
+		GUI:Notification{
+			Title = "Novus progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Novus.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Novus cooldown (may not work)",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Cooldown :",
+			Text = workspace.Interactions["Warden Shrines"].Novus.NovusTablet.TimerGui.TimerLabel.Text,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Deliver food to hellion (play as baby korathos)",
+	Description = "Grab food and sacrifice it to the hellion warden statue",
+	Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/vFjyV6zF", true))()
+		wait(0.5)
+		GUI:Notification{
+			Title = "Hellion progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Hellion.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Hellion cooldown (may not work)",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Cooldown :",
+			Text = workspace.Interactions["Warden Shrines"].Hellion.HellionTablet.TimerGui.TimerLabel.Text,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Deliver food to ardor (play as baby korathos)",
+	Description = "Grab food and sacrifice it to the ardor warden statue",
+	Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/CxWXg3cH", true))()
+		wait(0.5)
+		GUI:Notification{
+			Title = "Ardor progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Ardor.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Ardor cooldown (may not work)",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Cooldown :",
+			Text = workspace.Interactions["Warden Shrines"].Ardor.ArdorTablet.TimerGui.TimerLabel.Text,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Deliver food to boreal (play as baby korathos)",
+	Description = "Grab food and sacrifice it to the boreal warden statue",
+	Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/b0rJEt8Y", true))()
+		wait(0.5)
+		GUI:Notification{
+			Title = "Boreal progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Boreal.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Boreal cooldown (may not work)",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Cooldown :",
+			Text = workspace.Interactions["Warden Shrines"].Boreal.BorealTablet.TimerGui.TimerLabel.Text,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Eigion progression",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "EigionTablet progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Eigion.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Novus progression",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Novus progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Novus.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+
+Tab8:Button{
+	Name = "Hellion progression",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Hellion progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Hellion.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
+Tab8:Button{
+	Name = "Ardor progression",
+	Description = "",
+	Callback = function() 
+		GUI:Notification{
+			Title = "Ardor progression :",
+			Text = game:GetService("Players").LocalPlayer.PlayerGui.Data.WardenShrines.ShrineValues.Ardor.Value,
+			Duration = 3,
+			Callback = function() end
+		}
+	end
+}
